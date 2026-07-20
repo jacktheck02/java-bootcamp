@@ -1,0 +1,14 @@
+volumes:
+  oracle-lab-data:
+
+services:
+  oracle:
+    image: gvenzl/oracle-xe:21-slim
+    ports: 
+      - 1522:1521
+    environment: 
+      - ORACLE_PASSWORD=password
+      - APP_USER=labuser
+      - APP_USER_PASSWORD=labpass123
+    volumes:
+      - oracle-lab-data:/opt/oracle/oradata
