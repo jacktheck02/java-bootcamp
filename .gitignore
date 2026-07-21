@@ -6,7 +6,7 @@
 .vscode/
 
 # Local evidence — keep on laptop only
-notes/screenshots/
+./examples/jvm-compilation-lab/notes/screenshots/
 
 # Secrets — never commit
 .env
