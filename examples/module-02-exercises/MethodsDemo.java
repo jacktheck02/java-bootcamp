@@ -9,11 +9,17 @@ public class MethodsDemo {
         return n * n;
     }
 
+    public static double squareRoot(int n) {
+        return Math.sqrt(n);
+    }
+
     public static void main(String[] args) {
         int intResult = square(4);          // calls the int version
         double doubleResult = square(2.5);  // calls the double version — compiler picks by argument type
+        double sqrtResult = squareRoot(25);
 
         System.out.println("square(4) = " + intResult);
         System.out.println("square(2.5) = " + doubleResult);
+        System.out.println("squareRoot(25) = " + sqrtResult);
     }
 }
