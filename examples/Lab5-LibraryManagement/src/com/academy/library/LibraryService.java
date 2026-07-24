@@ -219,12 +219,13 @@ public class LibraryService {
 
         BorrowRecord borrowRecord = new BorrowRecord(bookId, memberId, LocalDate.now());
         borrowHistory.add(borrowRecord);
-        borrowFrequency.replace(bookId, borrowFrequency.get(bookId) + 1);
+        borrowFrequency.replace(bookId, borrowFrequency.getOrDefault(bookId, 0).intValue() + 1);
 
         System.out.println("Book has been successfully borrowed");
     }
 
     public void returnBook() {
+        System.out.print("Book ID: ");
         String bookId = scanner.nextLine();
         Book book = findBookById(bookId);
         if (book.equals(null)) {

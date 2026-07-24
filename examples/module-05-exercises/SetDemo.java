@@ -16,7 +16,6 @@ public class SetDemo {
         System.out.println("Unique count: " + categories.size());
         System.out.println("Contains Testing: " + categories.contains("Testing"));
 
-        // TODO: print sorted view using new TreeSet<>(categories)
         System.out.println("Sorted view: " + new TreeSet<>(categories));
     }
 }

@@ -1,7 +1,10 @@
 package com.academy.library;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.util.List;
 import java.util.TreeMap;
 
 public class ReportService {
@@ -12,30 +15,41 @@ public class ReportService {
         this.libraryService = libraryService;
     }
 
-    private String getSummaryReport() {
-
-        return "Report\nBooks : "
-                + libraryService.getBooks().size()
-                + "\nBorrowed : "
-                + libraryService.getBooks() // TODO: calculate borrowed books
-                + "\nAvailable : "
-                + libraryService.getBooks() // TODO: cacluate available books
-                + "\nMembers : "
-                + libraryService.getMembers().size()
-                + "\nMost Popular Category : "
-                + findMostPopularCategory();
-    }
-
     public void displaySummaryReport() {
         System.out.println(getSummaryReport());
-        // TODO: compute totalBooks, borrowedBooks, availableBooks, totalMembers
-        // TODO: findMostPopularCategory(); print Reports block matching solution format
     }
 
     public Path exportReportToFile(String fileName) throws IOException {
         String report = getSummaryReport();
-        return Files.writeString();
-        // TODO: build same summary + category breakdown; Files.writeString; return Path
+        return Files.writeString(
+                Path.of(
+                        "/home/jacktheck02/java-bootcamp/examples/Lab5-LibraryManagement/report.txt"),
+                report,
+                StandardOpenOption.APPEND);
+    }
+
+    private String getSummaryReport() {
+        List<Book> books = libraryService.getBooks();
+        int borrowedCount = 0;
+
+        for (Book book : books) {
+            if (!book.isAvailable()) {
+                borrowedCount++;
+            }
+        }
+
+        int availableBooks = books.size() - borrowedCount;
+
+        return "Report\nBooks : "
+                + books.size()
+                + "\nBorrowed : "
+                + borrowedCount
+                + "\nAvailable : "
+                + availableBooks
+                + "\nMembers : "
+                + libraryService.getMembers().size()
+                + "\nMost Popular Category : "
+                + findMostPopularCategory();
     }
 
     private String findMostPopularCategory() {
