@@ -1,0 +1,25 @@
+2026-07-27 08:00:59 ERROR Please login before performing this operation.
+InvalidPinException Please login before performing this operation.
+[com.academy.atm.ATMService.requireLogin(ATMService.java:193), com.academy.atm.ATMService.lambda$displayBalance$0(ATMService.java:60), com.academy.atm.ATMService.executeTransaction(ATMService.java:132), com.academy.atm.ATMService.displayBalance(ATMService.java:57), com.academy.atm.Main.main(Main.java:35)]
+2026-07-27 08:01:13 ERROR Please login before performing this operation.
+InvalidPinException Please login before performing this operation.
+[com.academy.atm.ATMService.requireLogin(ATMService.java:193), com.academy.atm.ATMService.lambda$displayMiniStatement$2(ATMService.java:73), com.academy.atm.ATMService.executeTransaction(ATMService.java:132), com.academy.atm.ATMService.displayMiniStatement(ATMService.java:70), com.academy.atm.Main.main(Main.java:37)]
+2026-07-27 08:01:19 ERROR NullPointerException demonstration
+NullPointerException Cannot invoke "com.academy.atm.Account.getBalance()" because "<local1>" is null
+[com.academy.atm.ATMService.demonstrateUncheckedExceptions(ATMService.java:94), com.academy.atm.Main.main(Main.java:44)]
+2026-07-27 08:01:19 ERROR ArithmeticException demonstration
+ArithmeticException / by zero
+[com.academy.atm.ATMService.demonstrateUncheckedExceptions(ATMService.java:101), com.academy.atm.Main.main(Main.java:44)]
+2026-07-27 08:01:19 ERROR ArrayIndexOutOfBoundsException demonstration
+ArrayIndexOutOfBoundsException Index 10 out of bounds for length 3
+[com.academy.atm.ATMService.demonstrateUncheckedExceptions(ATMService.java:110), com.academy.atm.Main.main(Main.java:44)]
+2026-07-27 10:01:51 INFO Login successful for account 1001
+2026-07-27 10:02:03 INFO Deposit completed successfully | Execution Time: 2728 ms
+2026-07-27 10:02:26 INFO Withdraw completed successfully | Execution Time: 7678 ms
+2026-07-27 10:02:42 INFO Mini Statement completed successfully | Execution Time: 1 ms
+2026-07-27 10:03:04 INFO Balance Inquiry completed successfully | Execution Time: 0 ms
+2026-07-27 11:51:42 INFO Login successful for account 1001
+2026-07-27 11:51:55 INFO Deposit completed successfully | Execution Time: 1671 ms
+2026-07-27 11:52:06 INFO Withdraw completed successfully | Execution Time: 1489 ms
+2026-07-27 11:52:15 INFO Balance Inquiry completed successfully | Execution Time: 0 ms
+2026-07-27 11:52:24 INFO Mini Statement completed successfully | Execution Time: 1 ms
