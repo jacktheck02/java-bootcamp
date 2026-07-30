@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <cus:createCustomerRequest>
+      <cus:fullName>Amina Khan</cus:fullName>
+      <cus:email>amina.khan@example.com</cus:email>
+      <cus:phone>+1-555-0101</cus:phone>
+      <cus:status>ACTIVE</cus:status>
+      <cus:correlationId>lab-request-001</cus:correlationId>
+    </cus:createCustomerRequest>
+  </Body>
+</Envelope>

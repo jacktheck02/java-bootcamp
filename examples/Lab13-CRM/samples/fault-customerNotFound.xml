@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>Customer not found: CUS-9999 (correlationId=lab-request-001)</faultstring>
+      <detail>
+        <errorCode>CUSTOMER_NOT_FOUND</errorCode>
+      </detail>
+    </Fault>
+  </Body>
+</Envelope>

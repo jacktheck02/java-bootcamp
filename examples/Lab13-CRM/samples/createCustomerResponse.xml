@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <cus:createCustomerResponse>
+      <cus:customer>
+        <cus:customerId>CUS-1001</cus:customerId>
+        <cus:fullName>Amina Khan</cus:fullName>
+        <cus:email>amina.khan@example.com</cus:email>
+        <cus:phone>+1-555-0101</cus:phone>
+        <cus:status>ACTIVE</cus:status>
+        <cus:createdAt>2026-07-14T17:00:00Z</cus:createdAt>
+      </cus:customer>
+    </cus:createCustomerResponse>
+  </Body>
+</Envelope>

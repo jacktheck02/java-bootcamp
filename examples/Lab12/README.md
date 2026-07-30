@@ -1,0 +1,73 @@
+# Lab 12 starter — timed path (~45 minutes)
+
+**Theme:** Coding standards — smell catalog + refactor messy service
+
+## Copy into your workspace
+
+**Windows (PowerShell)** — from this lab folder:
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\java-bootcamp\examples\lab12-crm" | Out-Null
+Copy-Item -Recurse -Force ".\starter\*" "$env:USERPROFILE\java-bootcamp\examples\lab12-crm\"
+cd $env:USERPROFILE\java-bootcamp\examples\lab12-crm
+```
+
+**macOS / Linux:**
+
+```bash
+mkdir -p ~/java-bootcamp/examples/lab12-crm
+cp -R starter/. ~/java-bootcamp/examples/lab12-crm/
+cd ~/java-bootcamp/examples/lab12-crm
+```
+
+Full GUIDE: [`../LAB-12-GUIDE.md`](../LAB-12-GUIDE.md)
+
+## 45-minute checklist
+
+- [ ] Confirm `CustomerService.before.java.txt` frozen
+- [ ] Fill `docs/smells.md` (≥8 smells)
+- [ ] Refactor to `createCustomer` / `getCustomer` / `updateStatus` (remove `doStuff`)
+- [ ] Make `CustomerServiceTest` TODOs green
+- [ ] Note before/after in `docs/before-after.md`
+- [ ] Run smoke test
+
+## Smoke test
+
+```bash
+mvn -B test
+```
+
+## Timed-path Pass criteria
+
+| Criterion | Pass / Fail |
+| --------- | ----------- |
+| No `doStuff` remains; clean API present | Pass / Fail |
+| Tests green for CUS-1001 / unknown / duplicate | Pass / Fail |
+| smells.md has ≥8 items | Pass / Fail |
+
+Continue remaining GUIDE steps as homework / full path if needed.
+
+Which inputs are untrusted (customer fields from callers)?
+
+
+Where are authn/authz/validation enforced after refactor (service helpers—auth still absent)?
+
+
+Which values are sensitive, and where stored (none beyond samples)?
+
+
+What can be retried safely (get; create is not silently idempotent)?
+
+
+What happens after partial failure (exceptions; no half-written silent null)?
+
+
+What would an operator monitor later (correlation ID, error rates)?
+
+
+Which local default is unacceptable in production (in-memory; System.out logging)?
+
+
+How are contracts versioned later (Lab 13+ WSDL/OpenAPI; stable method names help)?
+
+
