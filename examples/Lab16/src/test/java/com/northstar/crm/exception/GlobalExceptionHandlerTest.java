@@ -23,7 +23,6 @@ class GlobalExceptionHandlerTest {
 
     @Test
     void mapsValidationEmail() {
-        // build DTO with bad email, validate, map via fromValidation
         var request =
                 new CustomerRequestDTO(
                         "CUS-9999",
